@@ -1,2 +1,30 @@
 server:
   port: 8081
+
+spring:
+  h2:
+    console:
+      enable: true
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password: ahffkdy
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        #        show_sql: true
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug # note. Write log histories as file.
+
+jwt:
+  header: Authorization
+  secret: Y29kZWxpbmVyLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC13aXRoLXNlY3VyaXR5LWNvZGVsaW5lci1zcHJpbmctYm9vdC1qd3QtdHV0b3JpYWwtd2l0aC1zZWN1cml0eQo=
+  token-validity-in-seconds: 86400
