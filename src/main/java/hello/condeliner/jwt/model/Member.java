@@ -1,5 +1,6 @@
 package hello.condeliner.jwt.model;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -9,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+
+import org.springframework.security.core.GrantedAuthority;
 
 import lombok.AccessLevel;
 import lombok.Getter;
